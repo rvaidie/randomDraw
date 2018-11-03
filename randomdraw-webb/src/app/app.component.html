@@ -1,0 +1,14 @@
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="Element à ajouter" value="Ajouter un element" [formControl]="name">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="addList()">Ajouter à la liste</button>
+<mat-list *ngFor="let item of randomList">
+  <mat-list-item> {{ item }} </mat-list-item>
+</mat-list>
+
+<div>
+  <button mat-raised-button color="primary" (click)="sort()">Tirage au sort</button>
+  <ng-container *ngIf="choice">
+    {{ choice }}
+  </ng-container>
+</div>
